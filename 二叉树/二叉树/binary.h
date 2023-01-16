@@ -8,11 +8,11 @@ typedef struct BinaryTree {
 	struct BinaryTree* left;
 	datetype date;
 }bt;
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 void BinaryTreeInit(bt* ps);
-//ÓÃÊı×é¹¹½¨¶ş²æÊ÷
-bt* BinaryTreePush(bt** ps,datetype* array,int* i);
-//ÏÔÊ¾¶ş²æÊ÷
+//ç”¨æ•°ç»„æ„å»ºäºŒå‰æ ‘
+bt* BinaryTreePush(bt* ps,datetype* array,int* i);
+//æ˜¾ç¤ºäºŒå‰æ ‘
 void BinaryTreeShow(bt* ps);
 
 void BinaryTreeDestroy(bt* ps);
