@@ -1,3 +1,12 @@
 ﻿  binary.c
-D:\vs2019\二叉树\二叉树\binary.c(9,24): warning C4028: 形参 1 与声明不同
+D:\vs2019\二叉树\二叉树\binary.c(106,19): warning C4047: “函数”:“datetype1”与“bt *”的间接级别不同
+D:\vs2019\二叉树\二叉树\binary.c(106,17): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+D:\vs2019\二叉树\二叉树\binary.c(110,29): warning C4047: “函数”:“datetype1”与“BinaryTree *”的间接级别不同
+D:\vs2019\二叉树\二叉树\binary.c(110,23): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+D:\vs2019\二叉树\二叉树\binary.c(113,30): warning C4047: “函数”:“datetype1”与“BinaryTree *”的间接级别不同
+D:\vs2019\二叉树\二叉树\binary.c(113,23): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+D:\vs2019\二叉树\二叉树\binary.c(108,1): warning C4047: “初始化”:“bt *”与“datetype1”的间接级别不同
+  test.c
+D:\vs2019\二叉树\二叉树\test.c(28,13): warning C4013: “LevelTraver”未定义；假设外部返回 int
+  正在生成代码...
   二叉树.vcxproj -> D:\vs2019\二叉树\Debug\二叉树.exe

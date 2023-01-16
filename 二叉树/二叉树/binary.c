@@ -80,3 +80,40 @@ void BinaryTreeDestroy(bt* ps) {
 	free(ps);
 	ps = NULL;
 }
+
+int BinaryTreeDeep(bt* ps) {
+
+	if (ps == NULL) {
+		return 0;
+	}
+	int a = BinaryTreeDeep(ps->right);
+	int b = BinaryTreeDeep(ps->left);
+	return a > b ? a+1 : b+1;
+}
+
+bool isBalanced(bt* ps) {
+	if (ps == NULL) {
+		return true;
+	}
+	int a = BinaryTreeDeep(ps->right);
+	int b = BinaryTreeDeep(ps->left);
+	return abs(a - b) < 2 && isBalanced(ps->left) && isBalanced(ps->right);
+}
+//²ãĞò±éÀú
+void LevelTraver(bt* ps) {
+	Queue qu;
+	QueueInit(&qu);
+	QueuePush(&qu, ps);
+	while (!QueueEmpty(&qu)) {
+		bt* root = QueueFront(&qu);
+		if (root->left != NULL) {
+			QueuePush(&qu, root->left);
+		}
+		if (root->right != NULL) {
+			QueuePush(&qu, root->right);
+		}
+		QueuePop(&qu);
+		printf("%c", root->date);
+	}
+	
+}
