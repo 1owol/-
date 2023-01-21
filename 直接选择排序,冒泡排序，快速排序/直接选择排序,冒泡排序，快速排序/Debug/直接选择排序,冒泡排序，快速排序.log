@@ -1,0 +1,5 @@
+﻿  sort.c
+  test.c
+  正在生成代码...
+C:\Users\31628\source\repos\直接选择排序,冒泡排序，快速排序\直接选择排序,冒泡排序，快速排序\sort.c(102): warning C4715: “MidNumber”: 不是所有的控件路径都返回值
+  直接选择排序,冒泡排序，快速排序.vcxproj -> C:\Users\31628\source\repos\直接选择排序,冒泡排序，快速排序\Debug\直接选择排序,冒泡排序，快速排序.exe
