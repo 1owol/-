@@ -1,4 +1,5 @@
 #include"sort.h"
+#include "stack.h" 
 //直接选择排序
 void StraightSelectSort(int* a, int n) {
 	//int i;
@@ -206,4 +207,58 @@ void QuickSort3(int* a, int left, int right) {
 
 	QuickSort3(a, left, prev-1);
 	QuickSort3(a, prev + 1, right);
+}
+
+//快速排序(非递归）
+void QuickSort4(int* a, int left, int right) {
+	st stack;
+	StackIint(&stack);
+
+	int begin ;
+	int end ;
+	int pivot ;
+	int key;
+	int leftpoint;
+	int rightpoint;
+
+	StackPush(&stack, left);
+	StackPush(&stack, right);
+
+    while (!StackEmpty(&stack)) {
+		rightpoint = StackTop(&stack);
+		Stackpop(&stack);
+		leftpoint= StackTop(&stack);
+		Stackpop(&stack);
+
+		 key = a[leftpoint];
+		 begin = leftpoint;
+		 end = rightpoint;
+		 pivot = begin;
+
+
+		while (begin < end) {
+			while (begin < end && a[end] >= key) {
+				end--;
+			}
+			a[pivot] = a[end];
+			pivot = end;
+			while (begin < end && a[begin] <= key) {
+				begin++;
+			}
+			a[pivot] = a[begin];
+			pivot = begin;
+		}
+		a[pivot] = key;
+
+		if (pivot+1 < rightpoint) {
+			StackPush(&stack, pivot + 1);
+			StackPush(&stack, rightpoint);
+		}
+		if (leftpoint < pivot - 1) {
+			StackPush(&stack, leftpoint);
+			StackPush(&stack, pivot - 1);
+		}
+		
+	}
+
 }
